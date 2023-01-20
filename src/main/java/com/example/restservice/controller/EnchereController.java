@@ -36,8 +36,9 @@ public class EnchereController {
         }
         Enchere enc = new Enchere();
         Response res = new Response();
-        Parametre p = new Parametre("DureeEnchere");
-        if(duree <= p.getParametreValue().getValeur()){
+        Parametre max = new Parametre("DureeMax");
+        Parametre min = new Parametre("DureeMin");
+        if(min.getParametreValue().getValeur()<=duree && duree<=max.getParametreValue().getValeur()){
             Timestamp dt = Timestamp.valueOf(LocalDateTime.now());
             enc.setDateDebut(dt);
             enc.setNomProduit(nomProduit);

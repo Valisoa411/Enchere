@@ -29,7 +29,7 @@ public class Tache extends TimerTask {
     public void run() {
         System.out.println(new Date() + "Enchere terminee");
         try {
-            enc.setStatut(5);
+            enc.setStatut(21);
             enc.updateStatut();
             System.out.println("STATUT: "+enc.getStatut());
         } catch (Exception ex) {
