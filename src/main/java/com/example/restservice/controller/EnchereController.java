@@ -52,7 +52,7 @@ public class EnchereController {
             res.setData(new Success("Enchere ajouté avec succes"));
         }
         else{
-            res.setError(new Error(1,"La duree d'un enchère ne peut depasser de " + p.getParametreValue().getValeur() + " heures"));
+            res.setError(new Error(1,"La duree d'un enchère inferieur a " + min.getParametreValue().getValeur() + " heures ou superieur a " + max.getParametreValue().getValeur() + " heures"));
         }
         return g.toJson(res);
     }
