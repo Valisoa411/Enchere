@@ -27,7 +27,7 @@ public class EnchereController {
     Gson g = new Gson();
         
     @PostMapping("/enchere")
-    public String addEnchere(@RequestParam String token,@RequestParam String nomProduit,@RequestParam String description,double prixEnchere,double duree,@RequestParam int statut,@RequestParam int idClient,@RequestParam int idCategorie) throws Exception{
+    public String addEnchere(@RequestParam String token,@RequestParam String nomProduit,@RequestParam String description,double prixEnchere,double duree,@RequestParam int idCategorie) throws Exception{
         Token tk = null;
         try {
             tk = Token.check(token);
