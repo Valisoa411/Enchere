@@ -10,7 +10,7 @@ public class Connexion {
         try{
             System.out.println("getConnexion Try to connect");
             Class.forName("org.postgresql.Driver");
-            connect = DriverManager.getConnection("jdbc:postgresql://containers-us-west-29.railway.app:7844/railway","postgres","StHk4wo1W32EkhnxNGPe");
+            connect = DriverManager.getConnection("jdbc:postgresql://containers-us-west-29.railway.app:7246/railway","postgres","StHk4wo1W32EkhnxNGPe");
             System.out.println("getConnexion Connected");
         }
         catch(Exception e){
